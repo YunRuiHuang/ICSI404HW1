@@ -39,6 +39,7 @@ public class LongWord {
     }
 
     public void set(int value){
+        /*
         if(value == 1){
             for (int i = 0; i < 32; i++) {
                 this.longWord.set(i,true);
@@ -48,7 +49,8 @@ public class LongWord {
                 this.longWord.set(i,false);
             }
         }
-        /*
+         */
+
         for (int i = 31; i >= 0; i--) {
             this.longWord.set(i,false);
             if(value >= Math.pow(2,i)){
@@ -56,7 +58,7 @@ public class LongWord {
                 this.longWord.set(i,true);
             }
         }
-         */
+
     }
 
     public void copy(LongWord other){
