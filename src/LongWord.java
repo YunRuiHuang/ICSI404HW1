@@ -51,13 +51,26 @@ public class LongWord {
         }
          */
 
-        for (int i = 31; i >= 0; i--) {
-            this.longWord.set(i,false);
-            if(value >= Math.pow(2,i)){
-                value = value - (int)Math.pow(2,i);
-                this.longWord.set(i,true);
+        if(value>=0){
+            for (int i = 31; i >= 0; i--) {
+                this.longWord.set(i,false);
+                if(value >= Math.pow(2,i)){
+                    value = value - (int)Math.pow(2,i);
+                    this.longWord.set(i,true);
+                }
+            }
+        }else{
+            this.longWord.set(31);
+            value = value + 2147483647 + 1;
+            for (int i = 30; i >= 0; i--) {
+                this.longWord.set(i,false);
+                if(value >= Math.pow(2,i)){
+                    value = value - (int)Math.pow(2,i);
+                    this.longWord.set(i,true);
+                }
             }
         }
+
 
     }
 

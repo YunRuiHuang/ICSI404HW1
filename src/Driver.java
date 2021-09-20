@@ -16,7 +16,7 @@ public class Driver {
         System.out.println(longWord.toString());
 
         LongWord longWord2 = new LongWord();
-        longWord2.set(1);
+        longWord2.set(-1);
         System.out.println(longWord2.toString() + " " + longWord2.getUnsigned());
 
         System.out.println("1: shift left  " + longWord2.shiftLeftLogical(2).toString());
