@@ -6,16 +6,21 @@ public class Driver {
     //
     public static void main(String[] args){
 
+        //new a long word and set 12345 bits to true
         LongWord longWord = new LongWord();
         longWord.setBit(1);
         longWord.setBit(2);
         longWord.setBit(3);
         longWord.setBit(4);
         longWord.setBit(5);
-        longWord.clearBit(3);
-        longWord.toggleBit(0);
-        System.out.println(longWord.toString());
 
+        //set the bit 3 to false
+        longWord.clearBit(3);
+        //flip the bit 0
+        longWord.toggleBit(0);
+        System.out.println(longWord.toString() + "\n");
+
+        //new a long word and set to -1
         LongWord longWord2 = new LongWord();
         longWord2.set(-1);
         System.out.println(longWord2.toString() + " " + longWord2.getUnsigned());
@@ -28,8 +33,15 @@ public class Driver {
         System.out.println("6: or          " + longWord2.or(longWord).toString());
         System.out.println("7: xor         " + longWord2.xor(longWord).toString());
 
-
+        System.out.println();
         longWord.setBit(31);
         System.out.println(longWord.toString());
+        System.out.println("1: shift left  " + longWord.shiftLeftLogical(2).toString());
+        System.out.println("2: shift right " + longWord.shiftRightLogical(2).toString());
+        System.out.println("3: shift Arith " + longWord.shiftRightArithmetic(2).toString());
+        System.out.println("4: not         " + longWord.not().toString());
+        System.out.println("5: and         " + longWord2.and(longWord).toString());
+        System.out.println("6: or          " + longWord2.or(longWord).toString());
+        System.out.println("7: xor         " + longWord2.xor(longWord).toString());
     }
 }
