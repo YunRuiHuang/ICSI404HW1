@@ -291,7 +291,7 @@ public class LongWord {
                 bit = bit + " ";
             }
         }
-        return bit + "\t" + bitToHex() + "  " + getSigned();
+        return bit + "\t" + bitToHex() + " getSigned : " + getSigned();
     }
 
     /**
