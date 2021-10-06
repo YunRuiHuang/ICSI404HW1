@@ -178,10 +178,10 @@ public class LongWord {
         LongWord newLongWord = new LongWord();
         newLongWord.copy(this);
         for(int i=0; i < amount; i++){
-            for(int a = 0; a < 30; a++){
+            for(int a = 0; a < 31; a++){
                 newLongWord.setBit(a,newLongWord.getBit(a+1));
             }
-            newLongWord.clearBit(30);
+            //newLongWord.clearBit(30);
         }
         return newLongWord;
     }
